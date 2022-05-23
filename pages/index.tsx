@@ -25,7 +25,7 @@ const Home: NextPage = () => {
           Checkout
         </div>
       </div>
-      <div className="mx-auto w-3/4">
+      <div className="mx-auto w-3/4 group">
         <div className="bg-blue-500 text-white flex justify-between overflow-hidden p-6 rounded-2xl py-11">
           <span className="text-2xl pb-20">Profile</span>
           <span>
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         </div>
         <div className="bg-white rounded-3xl relative -top-20 px-8 py-5  shadow-lg">
           <div className="relative -top-20 flex flex-col items-center">
-            <div className="h-24 w-24 rounded-full bg-yellow-400"></div>
+            <div className="h-24 w-24 rounded-full bg-yellow-400 group-hover:bg-red-300 transition-opacity"></div>
           </div>
           <div className="relative -top-24">
             <div className="flex justify-between">
