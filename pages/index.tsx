@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { BsCart, BsArrowLeft, BsStar } from "react-icons/bs";
+import { BsCart, BsArrowLeft } from "react-icons/bs";
 
 const Home: NextPage = () => {
   return (
@@ -95,7 +95,31 @@ const Home: NextPage = () => {
           </button>
         </div>
       </div>
-      <div className="bg-white p-10 shadow-lg rounded-lg w-3/4 mx-auto"></div>
+      <div className="bg-slate-200 p-10 shadow-lg rounded-lg w-3/4 mx-auto focus-within:bg-blue-300">
+        <form action="submit" className="flex flex-col space-y-5 ">
+          <input
+            type="text"
+            placeholder="userName"
+            required
+            className="peer shadow-lg p-3 rounded-lg required:border-2 required:border-red-500 invalid:bg-red-200 border border-gray-300"
+          />
+          <span className="hidden peer-invalid:block peer-invalid:text-red-500">
+            The Username is invalid
+          </span>
+          <input
+            type="password"
+            placeholder="password"
+            required
+            className="shadow-lg p-3 rounded-lg required:border-2 required:border-red-500 invalid:bg-red-200 border border-gray-300"
+          />
+          <input
+            type="submit"
+            value="Login"
+            required
+            className="shadow-lg p-3 rounded-lg bg-blue-500 text-white text-2xl hover:opacity-75 hover:scale-105"
+          />
+        </form>
+      </div>
     </div>
   );
 };
