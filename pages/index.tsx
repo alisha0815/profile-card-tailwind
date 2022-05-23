@@ -106,6 +106,9 @@ const Home: NextPage = () => {
           <span className="hidden peer-invalid:block peer-invalid:text-red-500">
             The Username is invalid
           </span>
+          <span className="hidden peer-valid:block peer-valid:text-blue-500">
+            Awsome Username
+          </span>
           <input
             type="password"
             placeholder="password"
@@ -119,6 +122,25 @@ const Home: NextPage = () => {
             className="shadow-lg p-3 rounded-lg bg-blue-500 text-white text-2xl hover:opacity-75 hover:scale-105"
           />
         </form>
+      </div>
+      <div className="bg-slate-200 p-10 shadow-lg rounded-lg w-3/4 mx-auto">
+        <ul className="list-disc marker:text-teal-500">
+          <li>oslo</li>
+          <li>bergen</li>
+          <li>tromsø</li>
+        </ul>
+        <input
+          type="file"
+          className="my-3 file:border-0 file:bg-purple-700 file:text-white file:p-2 file:rounded-xl file:transition-colors file:cursor-wait file:hover:text-purple-700 file:hover:bg-white file:hover:border-2 file:hover:font-bold"
+        />
+        <div>
+          <p className="first-letter:text-7xl first-letter:hover:text-purple-700">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab qui
+            minima iure eveniet quibusdam provident placeat voluptatem, nisi
+            dolorum tenetur, eaque at, accusamus error earum maiores culpa
+            numquam cumque sint?
+          </p>
+        </div>
       </div>
     </div>
   );
