@@ -2,10 +2,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { BsCart, BsArrowLeft, BsStar } from "react-icons/bs";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-amber-100 px-20 py-10 flex flex-col space-y-6">
+    <div className="bg-amber-100 px-20 py-10 flex flex-col space-y-6 min-h-screen">
       <div className="bg-white p-10 shadow-lg rounded-lg w-3/4 mx-auto">
         <span className="font-bold text-2xl">Selected Item</span>
         <div className="flex justify-between my-2">
@@ -24,10 +25,12 @@ const Home: NextPage = () => {
           Checkout
         </div>
       </div>
-      <div className="w-3/4 mx-auto">
+      <div className="mx-auto w-3/4">
         <div className="bg-blue-500 text-white flex justify-between overflow-hidden p-6 rounded-2xl py-11">
           <span className="text-2xl pb-20">Profile</span>
-          <span>cart</span>
+          <span>
+            <BsCart size={35} />
+          </span>
         </div>
         <div className="bg-white rounded-3xl relative -top-20 px-8 py-5  shadow-lg">
           <div className="relative -top-20 flex flex-col items-center">
@@ -51,7 +54,47 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white p-10 shadow-lg rounded-lg w-3/4 mx-auto"></div>
+      <div className="bg-white p-10 shadow-lg rounded-lg w-3/4 mx-auto">
+        <div className="flex justify-between items-center">
+          <span>
+            <BsArrowLeft size={35} />
+          </span>
+          <div className="space-x-5">
+            <span className="font-semibold">⭐4.9</span>
+            <span className="shadow-xl bg-slate-200 rounded-xl p-2">💖</span>
+          </div>
+        </div>
+        <div className="flex justify-center my-10">
+          <Image src="/chair.png" alt="chair image" width={200} height={350} />
+        </div>
+        <div className="flex flex-col">
+          <span className="text-2xl font-semibold mb-1.5">Swoon Lounge</span>
+          <span className="text-slate-500 text-md mb-1.5">Chair</span>
+        </div>
+        <div className="w=30 h=30 bg-yellow-500" />
+        <div className="flex items-center justify-between">
+          <div className="flex space-x-1.5">
+            <input type="radio" />
+            <input type="radio" />
+            <input type="radio" />
+          </div>
+          <div className="flex items-center justify-center">
+            <button className="flex justify-center items-center bg-blue-200 aspect-square w-10 text-2xl rounded-lg">
+              -
+            </button>
+            <span className="text-lg font-semibold mx-2">1</span>
+            <button className="flex justify-center items-center bg-blue-200 aspect-square w-10 text-2xl rounded-lg">
+              +
+            </button>
+          </div>
+        </div>
+        <div className="flex justify-between items-center mt-5">
+          <span className="text-2xl font-bold">$450</span>
+          <button className="p-2 bg-blue-600 rounded-lg text-white text-lg">
+            Add to cart
+          </button>
+        </div>
+      </div>
       <div className="bg-white p-10 shadow-lg rounded-lg w-3/4 mx-auto"></div>
     </div>
   );
