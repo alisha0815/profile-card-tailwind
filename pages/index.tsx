@@ -21,7 +21,7 @@ const Home: NextPage = () => {
           <span className="font-semibold">Total</span>
           <span className="font-semibold">$380</span>
         </div>
-        <div className="font-semibold bg-blue-500 text-white p-3 mt-4 w-2/4 mx-auto text-center rounded-lg">
+        <div className="font-semibold bg-blue-500 text-white p-3 mt-4 w-2/4 mx-auto text-center rounded-lg hover:opacity-80 hover:scale-105 active:bg-red-400">
           Checkout
         </div>
       </div>
@@ -74,9 +74,9 @@ const Home: NextPage = () => {
         <div className="w=30 h=30 bg-yellow-500" />
         <div className="flex items-center justify-between">
           <div className="flex space-x-1.5">
-            <input type="radio" />
-            <input type="radio" />
-            <input type="radio" />
+            <button className="w-5 h-5 rounded-full bg-yellow-500 focus:ring-2 ring-offset-2 ring-yellow-500 transition" />
+            <button className="w-5 h-5 rounded-full bg-blue-500 focus:ring-2 ring-offset-2 ring-blue-500 transition" />
+            <button className="w-5 h-5 rounded-full bg-red-500 focus:ring-2 ring-offset-2 ring-red-500 transition" />
           </div>
           <div className="flex items-center justify-center">
             <button className="flex justify-center items-center bg-blue-200 aspect-square w-10 text-2xl rounded-lg">
@@ -90,7 +90,7 @@ const Home: NextPage = () => {
         </div>
         <div className="flex justify-between items-center mt-5">
           <span className="text-2xl font-bold">$450</span>
-          <button className="p-2 bg-blue-600 rounded-lg text-white text-lg">
+          <button className="p-2 bg-blue-600 rounded-lg text-white text-lg hover:opacity-80 hover:scale-105 active:bg-red-400">
             Add to cart
           </button>
         </div>
