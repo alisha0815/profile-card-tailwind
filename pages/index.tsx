@@ -3,12 +3,22 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { BsCart, BsArrowLeft } from "react-icons/bs";
+import { useTheme } from "next-themes";
 
 const Home: NextPage = () => {
+  const { theme, setTheme } = useTheme();
   return (
-    <div className="bg-blue-300 flex items-center mx-auto">
-      <div className="bg-red-100 px-20 py-10 grid gap-10 xl:grid-cols-3 lg:grid-cols-2 place-content-center">
-        <div className="bg-white p-10 shadow-lg rounded-lg mx-auto">
+    <div className="dark">
+      <div className="bg-red-100 px-20 py-10 grid gap-10 xl:grid-cols-3 lg:grid-cols-2 place-content-center dark">
+        <button
+          aria-label="Toggle Dark Mode"
+          type="button"
+          className="p-3 h-12 w-12 order-2 md:order-3"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        >
+          Dark Mode
+        </button>
+        <div className="bg-white p-10 shadow-lg rounded-lg mx-auto dark:bg-black">
           <span className="font-bold text-2xl">Selected Item</span>
           <div className="flex justify-between my-2">
             <span className="text-gray-500">Grey Chair</span>
@@ -55,7 +65,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="bg-white p-10 shadow-lg rounded-lg w-3/4 mx-auto lg:col-span-2 xl:col-span-1">
+        <div className="bg-white p-10 shadow-lg rounded-lg w-3/4 mx-auto lg:col-span-2 xl:col-span-1 ">
           <div className="flex justify-between items-center">
             <span>
               <BsArrowLeft size={35} />
@@ -101,7 +111,7 @@ const Home: NextPage = () => {
             </button>
           </div>
         </div>
-        <div className="bg-slate-200 p-10 shadow-lg rounded-lg w-3/4 mx-auto focus-within:bg-blue-300">
+        <div className="bg-slate-200 p-10 shadow-lg rounded-lg w-3/4 mx-auto focus-within:bg-blue-300 ">
           <form action="submit" className="flex flex-col space-y-5 ">
             <input
               type="text"
@@ -129,7 +139,7 @@ const Home: NextPage = () => {
             />
           </form>
         </div>
-        <div className="bg-slate-200 p-10 shadow-lg rounded-lg w-3/4 mx-auto">
+        <div className="bg-slate-200 p-10 shadow-lg rounded-lg w-3/4 mx-auto ">
           <ul className="list-disc marker:text-teal-500">
             <li>oslo</li>
             <li>bergen</li>
